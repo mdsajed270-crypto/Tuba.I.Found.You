@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>For Tuba 💖</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-black flex items-center justify-center min-h-screen overflow-y-auto">
+
+  <!-- BACKGROUND MUSIC -->
+  <audio id="bgmusic" loop>
+    <source src="your-song.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- MAIN SCREEN -->
+  <div id="main-screen"
+    class="relative w-[370px] min-h-[700px] bg-white rounded-[40px] overflow-hidden shadow-2xl">
+
+    <div class="absolute top-10 w-full text-center z-20">
+      <h1 class="text-5xl font-black uppercase leading-tight">
+        PLS <br>
+        ACCEPT <br>
+        THE GIFT
+      </h1>
+    </div>
+
+    <div class="absolute inset-0 flex items-center justify-center pt-24">
+      <img src="your-dog-image.jpg"
+        class="w-[85%] h-[55%] object-cover rounded-3xl shadow-xl">
+    </div>
+
+    <div class="absolute bottom-16 w-full flex justify-center gap-6">
+
+      <button onclick="showYesScreen()"
+        class="bg-blue-600 text-white text-3xl font-bold px-10 py-3 rounded-2xl shadow-xl">
+        YES
+      </button>
+
+      <button onclick="showNoScreen()"
+        class="bg-blue-600 text-white text-3xl font-bold px-10 py-3 rounded-2xl shadow-xl">
+        NO
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- NO SCREEN -->
+  <div id="no-screen" style="display:none;"
+    class="w-[370px] h-[700px] bg-red-100 rounded-[40px] shadow-2xl flex-col items-center justify-center text-center p-6 overflow-y-scroll">
+
+    <img src="angry-dog.jpg"
+      class="w-full h-[55%] object-cover rounded-3xl shadow-xl">
+
+    <h2 class="text-4xl font-black mt-6 text-red-600">
+      HOW DARE YOU 😤
+    </h2>
+
+    <p class="text-lg mt-3 font-medium text-gray-700">
+      My dog is disappointed in you 🐶
+    </p>
+
+    <button onclick="tryAgain()"
+      class="mt-8 bg-red-500 text-white text-2xl font-bold px-8 py-3 rounded-2xl shadow-lg">
+      TRY AGAIN
+    </button>
+
+  </div>
+
+  <!-- YES SCREEN -->
+  <div id="yes-screen" style="display:none;"
+    class="w-[370px] h-[700px] bg-pink-100 rounded-[40px] shadow-2xl flex-col items-center justify-center text-center p-6 overflow-y-scroll">
+
+    <img src="cute-dog-2.jpg"
+      class="w-full h-[55%] object-cover rounded-3xl shadow-xl">
+
+    <h2 class="text-4xl font-black mt-6 text-pink-600">
+      THAT'S A GOOD GIRL 💖
+    </h2>
+
+    <p class="text-lg mt-3 font-medium text-gray-700">
+      Knew you'd accept my cute gift 😭✨
+    </p>
+
+    <button onclick="showEnding()"
+      class="mt-8 bg-pink-500 text-white text-2xl font-bold px-8 py-3 rounded-2xl shadow-lg">
+      NEXT ➜
+    </button>
+
+  </div>
+
+  <!-- VIDEO SCREEN -->
+  <div id="ending-screen" style="display:none;"
+    class="relative w-[370px] h-[700px] bg-black rounded-[40px] overflow-hidden shadow-2xl flex items-center justify-center">
+
+    <video autoplay controls class="w-full h-full object-contain bg-black">
+      <source src="end-video.mp4" type="video/mp4">
+    </video>
+
+    <div class="absolute bottom-6 w-full flex justify-center">
+
+      <button onclick="showFriendshipScreen()"
+        class="bg-white text-black text-xl font-bold px-8 py-3 rounded-2xl shadow-xl">
+        One More Thing 💌
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- FRIENDSHIP MESSAGE -->
+  <div id="friendship-screen" style="display:none;"
+    class="w-[370px] h-[700px] bg-pink-50 rounded-[40px] shadow-2xl flex flex-col items-center text-center p-8 overflow-y-scroll">
+
+    <h2 class="text-4xl font-black mt-6 text-pink-600">
+      For Tuba 💖
+    </h2>
+
+    <p class="text-lg mt-8 text-gray-700 leading-relaxed font-medium">
+
+      I love you Tuba 🌸
+
+      <br><br>
+
+      You are the most beautiful part of my life,
+      and honestly one of the best things that ever happened to me 😭✨
+
+      <br><br>
+
+      Your care, your presence,
+      your random talks,
+      your anger,
+      your smile…
+      everything about you feels special to me 💕
+
+      <br><br>
+
+      Even on my worst days,
+      talking to you somehow makes everything feel lighter.
+
+      <br><br>
+
+      You became my comfort person,
+      my favourite notification,
+      and someone I never want to lose 🫶
+
+      <br><br>
+
+      Maybe I don't always say it properly,
+      but your existence genuinely means a lot to me.
+
+      <br><br>
+
+      Thank you for staying,
+      for caring,
+      and for being you 🌷
+
+      <br><br>
+
+      And one more thing...
+
+      <br><br>
+
+      The video lyrics are not just lyrics 🎶
+
+      They are honestly everything
+      I always wanted to say to you but never knew how to explain properly.
+
+      <br><br>
+
+      Every line in that song carries a piece of my feelings,
+      my care,
+      my attachment,
+      and the place you hold in my life 💖
+
+      <br><br>
+
+      Because when I found you,
+      it genuinely felt like...
+      "I found her" ✨
+
+      <br><br>
+
+      No matter what happens,
+      I will always protect this beautiful bond we have 💌
+
+    </p>
+
+    <button onclick="showBestieScreen()"
+      class="mt-8 mb-10 bg-pink-500 text-white text-xl font-bold px-8 py-3 rounded-2xl shadow-xl">
+      One Last Thing 🌸
+    </button>
+
+  </div>
+
+  <!-- BESTIE SCREEN -->
+  <div id="bestie-screen" style="display:none;"
+    class="w-[370px] h-[700px] bg-pink-100 rounded-[40px] shadow-2xl flex flex-col items-center text-center p-8 overflow-y-scroll">
+
+    <img src="tuba.jpg"
+      class="w-48 h-48 object-cover rounded-full border-4 border-pink-400 shadow-xl">
+
+    <h2 class="text-4xl font-black mt-6 text-pink-600">
+      That's My Bestie 💖
+    </h2>
+
+    <p class="text-lg mt-6 text-gray-700 leading-relaxed font-medium">
+
+      That's my favourite person 🌸
+
+      <br><br>
+
+      My comfort,
+      my happiness,
+      my peace,
+      and honestly my everything 😭✨
+
+      <br><br>
+
+      I don't think you even realize
+      how important you are to me.
+
+      <br><br>
+
+      Your smile literally fixes my mood 💕
+
+      <br><br>
+
+      Thank you for existing,
+      Tuba 🫶
+
+    </p>
+
+    <h3 class="text-2xl font-black mt-8 text-pink-600">
+      Did you love this? 👀
+    </h3>
+
+    <div class="flex gap-4 mt-6 mb-10">
+
+      <button onclick="loveYes()"
+        class="bg-green-500 text-white text-xl font-bold px-6 py-3 rounded-2xl shadow-xl">
+        YES 💖
+      </button>
+
+      <button onclick="loveNo()"
+        class="bg-red-500 text-white text-xl font-bold px-6 py-3 rounded-2xl shadow-xl">
+        NO 😭
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- CUSTOM POPUP -->
+  <div id="popup"
+    style="display:none;"
+    class="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
+
+    <div class="bg-white w-[320px] rounded-3xl p-6 text-center shadow-2xl">
+
+      <h2 id="popup-text"
+        class="text-2xl font-bold text-pink-600 leading-relaxed">
+      </h2>
+
+      <button onclick="closePopup()"
+        class="mt-6 bg-pink-500 text-white px-6 py-3 rounded-2xl font-bold">
+        OK 💖
+      </button>
+
+    </div>
+
+  </div>
+
+  <script>
+
+    function showNoScreen() {
+      document.getElementById("main-screen").style.display = "none";
+      document.getElementById("no-screen").style.display = "flex";
+    }
+
+    function tryAgain() {
+      document.getElementById("no-screen").style.display = "none";
+      document.getElementById("main-screen").style.display = "block";
+    }
+
+    function showYesScreen() {
+      document.getElementById("main-screen").style.display = "none";
+      document.getElementById("yes-screen").style.display = "flex";
+    }
+
+    function showEnding() {
+      document.getElementById("yes-screen").style.display = "none";
+      document.getElementById("ending-screen").style.display = "flex";
+    }
+
+    function showFriendshipScreen() {
+      document.getElementById("ending-screen").style.display = "none";
+      document.getElementById("friendship-screen").style.display = "flex";
+
+      document.getElementById("bgmusic").play();
+    }
+
+    function showBestieScreen() {
+      document.getElementById("friendship-screen").style.display = "none";
+      document.getElementById("bestie-screen").style.display = "flex";
+    }
+
+    function loveYes() {
+      document.getElementById("popup-text").innerHTML =
+        "Spidey says 💖<br><br>I knew it 😭💖 Love youuuuu 🌸";
+
+      document.getElementById("popup").style.display = "flex";
+    }
+
+    function loveNo() {
+      document.getElementById("popup-text").innerHTML =
+        "Spidey says 😭<br><br>So sadddd 💔";
+
+      document.getElementById("popup").style.display = "flex";
+    }
+
+    function closePopup() {
+      document.getElementById("popup").style.display = "none";
+    }
+
+  </script>
+
+</body>
+
+</html>
